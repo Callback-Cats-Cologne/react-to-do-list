@@ -7,7 +7,7 @@ export default function ToDoList({ todos }) {
       <span contentEditable="true" className="editable">
         {task}
       </span>
-      <button>🅇</button>
+      <button className="delete__btn">💥</button>
     </li>
   ));
   return taskElements;
