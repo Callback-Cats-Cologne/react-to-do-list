@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./form.css";
-import { saveTask } from "./storage";
+import { saveTask } from "../utils/storage";
 import ToDoList from "./ToDoList";
 
 export default function Input({ prop }) {
