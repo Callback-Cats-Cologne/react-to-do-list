@@ -2,21 +2,24 @@ import { useState } from "react";
 import "./input.css";
 import { saveTask } from "./storage";
 
-export default function Input() {
+export default function Input({ prop }) {
   const [task, setTask] = useState(null);
   const [todos, setTodos] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
-  //   const tasksresponse = saveTask(tasks);
+
   const submit = (event) => {
     event.preventDefault();
-    // setTasks(event.target.tasks);
     saveTask(task);
     setTodos([...todos, task]);
     setTask("");
   };
 
-  //   const todo = "";
+  const taskElements = todos.map((task) => (
+    <li key={task} tasks={task}>
+      {todos}
+    </li>
+  ));
 
   return (
     <div>
@@ -32,7 +35,7 @@ export default function Input() {
         />
         <button>🐮</button>
       </form>
-      <p>{todos}</p>
+      <ul>{taskElements}</ul>
     </div>
   );
 }
