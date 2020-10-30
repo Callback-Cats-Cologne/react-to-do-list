@@ -1,5 +1,13 @@
+import Input from "./components/Input";
+
 function App() {
-  return <div></div>;
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  return (
+    <div>
+      <Input todos={tasks}></Input>
+    </div>
+  );
 }
 
 export default App;
