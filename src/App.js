@@ -1,10 +1,13 @@
 import Input from "./components/Form";
+import gif from "./giphy.webp";
 
 function App() {
   return (
-    <div>
+    <main>
+      <img className="gif" src={gif} alt="todo" />
+      <h1>Machens!</h1>
       <Input></Input>
-    </div>
+    </main>
   );
 }
 
