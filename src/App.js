@@ -1,11 +1,9 @@
-import Input from "./components/Input";
+import Input from "./components/Form";
 
 function App() {
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
   return (
     <div>
-      <Input todos={tasks}></Input>
+      <Input></Input>
     </div>
   );
 }

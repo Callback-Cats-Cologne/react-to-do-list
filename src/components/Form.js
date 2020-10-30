@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./input.css";
+import "./form.css";
 import { saveTask } from "./storage";
+import ToDoList from "./ToDoList";
 
 export default function Input({ prop }) {
   const [task, setTask] = useState(null);
@@ -15,11 +16,7 @@ export default function Input({ prop }) {
     setTask("");
   };
 
-  const taskElements = todos.map((task) => (
-    <li key={task} tasks={task}>
-      {task} <input type="checkbox" />
-    </li>
-  ));
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
   return (
     <div>
@@ -35,7 +32,7 @@ export default function Input({ prop }) {
         />
         <button>🐮</button>
       </form>
-      <ul>{taskElements}</ul>
+      <ToDoList todos={tasks} />
     </div>
   );
 }
