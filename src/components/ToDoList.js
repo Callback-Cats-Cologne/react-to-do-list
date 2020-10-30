@@ -6,7 +6,9 @@ export default function ToDoList({ todos }) {
     <li key={task} tasks={task}>
       <input type="checkbox" />
       <span>{task}</span>
-      <button onClick={() => deleteItem()}>🅇</button>
+      <button className="delete__btn" onClick={() => deleteItem()}>
+        💥
+      </button>
     </li>
   ));
   return taskElements;

@@ -19,18 +19,18 @@ export default function Input({ prop }) {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
   return (
-    <div>
+    <div className="container">
       <form className="form" onSubmit={submit}>
         <input
           onChange={(event) => {
             setTask(event.target.value);
           }}
-          className="inputField"
+          className="form__input"
           value={task}
           type="text"
           placeholder="Add ToDo"
         />
-        <button>🐮</button>
+        <button>✏️</button>
       </form>
       <ToDoList todos={tasks} />
     </div>
