@@ -17,7 +17,7 @@ export default function Input({ prop }) {
 
   const taskElements = todos.map((task) => (
     <li key={task} tasks={task}>
-      {task}
+      {task} <input type="checkbox" />
     </li>
   ));
 
