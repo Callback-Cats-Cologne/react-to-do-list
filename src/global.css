@@ -23,5 +23,10 @@ main {
 img {
   margin-top: 30px;
   border-radius: 9px;
-  box-shadow: inset 5px 5px 10px #7bbeb9, inset -5px -5px 10px #9ff6f1;
+  box-shadow: -3px -4px 4px rgba(150, 150, 150, 1);
+}
+
+h1 {
+  letter-spacing: 1px;
+  text-shadow: -3px -4px 4px rgba(150, 150, 150, 1);
 }
