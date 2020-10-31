@@ -5,7 +5,7 @@ function App() {
   return (
     <main>
       <img className="gif" src={gif} alt="todo" />
-      <h1>Machens!</h1>
+      <h1>Machens Ma'</h1>
       <Input></Input>
     </main>
   );
