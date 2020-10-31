@@ -12,22 +12,31 @@
 input::placeholder {
   text-align: center;
   font-family: "Architects Daughter", cursive;
-  color: #8ddad5;
+  color: #ebedee;
 }
 
 .form__input {
   height: 50px;
-  border: 1px solid #8ddad5;
+  border: none;
   border-radius: 9px;
+  background: #8ddad5;
+  box-shadow: inset 5px 5px 10px #7bbeb9, inset -5px -5px 10px #9ff6f1;
 }
 
 form > button {
   height: 50px;
   width: 50px;
-  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
   border: none;
-  border-radius: 50%;
+  border-radius: 73px;
+  background: linear-gradient(145deg, #97e9e4, #7fc4c0);
+  box-shadow: 8px 8px 15px #7bbeb9, -8px -8px 15px #9ff6f1;
   cursor: pointer;
   margin-left: 15px;
   font-size: 20px;
+}
+
+form > button:active {
+  border-radius: 73px;
+  background: #8ddad5;
+  box-shadow: inset 5px 5px 11px #7bbeb9, inset -5px -5px 11px #9ff6f1;
 }
